@@ -42,10 +42,9 @@ class ViewController: UIViewController {
         player!.seek(to: CMTime.zero)
     }
 
-    //Goto SecViewController Button
-    @IBAction func showSecViewController(_ sender: Any) {
+    @IBAction func showLoginViewController(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(identifier: "Sec")
+        let secondVC = storyboard.instantiateViewController(identifier: "Login")
         
         secondVC.modalPresentationStyle = .fullScreen
         secondVC.modalTransitionStyle = .crossDissolve

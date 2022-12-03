@@ -16,7 +16,8 @@
 		184B64AC293BC733001B800B /* RailTripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B64AB293BC733001B800B /* RailTripTests.swift */; };
 		184B64B6293BC733001B800B /* RailTripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B64B5293BC733001B800B /* RailTripUITests.swift */; };
 		184B64B8293BC733001B800B /* RailTripUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B64B7293BC733001B800B /* RailTripUITestsLaunchTests.swift */; };
-		184B64CB293BCE3B001B800B /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 184B64CA293BCE3B001B800B /* video.mp4 */; };
+		184B64D1293BE0D1001B800B /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 184B64D0293BE0D1001B800B /* video.mp4 */; };
+		184B64D4293BE13A001B800B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B64D3293BE13A001B800B /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +51,8 @@
 		184B64B1293BC733001B800B /* RailTripUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RailTripUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		184B64B5293BC733001B800B /* RailTripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailTripUITests.swift; sourceTree = "<group>"; };
 		184B64B7293BC733001B800B /* RailTripUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailTripUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		184B64CA293BCE3B001B800B /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+		184B64D0293BE0D1001B800B /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
+		184B64D3293BE13A001B800B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +105,13 @@
 			children = (
 				184B6494293BC732001B800B /* AppDelegate.swift */,
 				184B6496293BC732001B800B /* SceneDelegate.swift */,
+				184B64D2293BE122001B800B /* View */,
 				184B6498293BC732001B800B /* ViewController.swift */,
 				184B649A293BC732001B800B /* Main.storyboard */,
 				184B649D293BC733001B800B /* Assets.xcassets */,
 				184B649F293BC733001B800B /* LaunchScreen.storyboard */,
 				184B64A2293BC733001B800B /* Info.plist */,
-				184B64CA293BCE3B001B800B /* video.mp4 */,
+				184B64D0293BE0D1001B800B /* video.mp4 */,
 			);
 			path = RailTrip;
 			sourceTree = "<group>";
@@ -128,6 +131,14 @@
 				184B64B7293BC733001B800B /* RailTripUITestsLaunchTests.swift */,
 			);
 			path = RailTripUITests;
+			sourceTree = "<group>";
+		};
+		184B64D2293BE122001B800B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				184B64D3293BE13A001B800B /* LoginViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,7 +248,7 @@
 				184B64A1293BC733001B800B /* LaunchScreen.storyboard in Resources */,
 				184B649E293BC733001B800B /* Assets.xcassets in Resources */,
 				184B649C293BC732001B800B /* Main.storyboard in Resources */,
-				184B64CB293BCE3B001B800B /* video.mp4 in Resources */,
+				184B64D1293BE0D1001B800B /* video.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184B64D4293BE13A001B800B /* LoginViewController.swift in Sources */,
 				184B6499293BC732001B800B /* ViewController.swift in Sources */,
 				184B6495293BC732001B800B /* AppDelegate.swift in Sources */,
 				184B6497293BC732001B800B /* SceneDelegate.swift in Sources */,
