@@ -18,7 +18,10 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-//    func dropshadowButton(buttonName:UIButton) {
+    @IBAction func btnLoginSubmit(_ sender: Any) {
+        BackendConnect().demoprint()
+    }
+    //    func dropshadowButton(buttonName:UIButton) {
 //
 //        let grayColor = (UIColor(red: 56, green: 56, blue: 56, alpha: 1.0))
 //
