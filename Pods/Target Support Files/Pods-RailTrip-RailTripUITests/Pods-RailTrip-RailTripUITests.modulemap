@@ -1,0 +1,6 @@
+framework module Pods_RailTrip_RailTripUITests {
+  umbrella header "Pods-RailTrip-RailTripUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

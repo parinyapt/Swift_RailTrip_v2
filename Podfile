@@ -6,9 +6,12 @@ target 'RailTrip' do
   use_frameworks!
 
   # Pods for RailTrip
-pod 'RAMAnimatedTabBarController'
-pod 'LGButton'
-pod 'SkeletonView'
+  pod 'RAMAnimatedTabBarController'
+  pod 'LGButton'
+  pod 'SkeletonView'
+  
+  pod 'Alamofire'
+  pod 'SwiftValidators'
 
   target 'RailTripTests' do
     inherit! :search_paths

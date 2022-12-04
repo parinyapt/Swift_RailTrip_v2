@@ -193,6 +193,9 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <navigationItem key="navigationItem" id="9Z5-Cu-axs"/>
+                    <connections>
+                        <outlet property="TFemail" destination="xFR-hu-MEQ" id="fE4-XL-lsi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEX-K8-Q9R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -674,9 +677,6 @@
     </scenes>
     <designables>
         <designable name="6k0-vh-8Co">
-            <size key="intrinsicContentSize" width="10" height="10"/>
-        </designable>
-        <designable name="NhQ-FD-P9h">
             <size key="intrinsicContentSize" width="10" height="10"/>
         </designable>
         <designable name="Oh4-7r-h0O">

@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (5.6.2)
+  - LGButton (1.1.6)
+  - RAMAnimatedTabBarController (5.2.0)
+  - SkeletonView (1.30.4)
+  - SwiftValidators (9.0.3)
+
+DEPENDENCIES:
+  - Alamofire
+  - LGButton
+  - RAMAnimatedTabBarController
+  - SkeletonView
+  - SwiftValidators
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - LGButton
+    - RAMAnimatedTabBarController
+    - SkeletonView
+    - SwiftValidators
+
+SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
+  LGButton: 9f0a7f9d3030e3f504108342f6b66d64a429371b
+  RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
+  SkeletonView: 5a050f6411e697abd4cda0a8d767013399dccd69
+  SwiftValidators: b1cb650ce02ef6ad894f1d471f970b249c794342
+
+PODFILE CHECKSUM: 417559a238e10fe2c337083cd47ff0a3d8e3ebc9
+
+COCOAPODS: 1.11.3
