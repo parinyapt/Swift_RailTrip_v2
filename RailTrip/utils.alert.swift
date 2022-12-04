@@ -21,4 +21,17 @@ class utilsAlert {
         return popup
 
     }
+    
+//    func AlertWithActionAfterClick(title:String,message:String,buttontext:String,action: ()->() ) -> PopupDialog {
+//
+//        let buttonOne = CancelButton(title: buttontext) {
+//            action
+//        }
+//        
+//        let popup = PopupDialog(title: title, message: message)
+//        popup.addButtons([buttonOne])
+//        
+//        return popup
+//
+//    }
 }

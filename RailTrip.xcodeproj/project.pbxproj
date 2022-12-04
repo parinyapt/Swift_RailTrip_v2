@@ -21,6 +21,8 @@
 		2E7965ABA3B284A9E3647878 /* Pods_RailTrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE76937E0EA1C8429B6C71A /* Pods_RailTrip.framework */; };
 		725506D2CB0DF39B96C1E4AB /* Pods_RailTripTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327D7613ABCE6A6E34A8606C /* Pods_RailTripTests.framework */; };
 		AF07256F293D108D0097D992 /* utils.alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF07256E293D108D0097D992 /* utils.alert.swift */; };
+		AF072571293D28060097D992 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF072570293D28060097D992 /* RegisterViewController.swift */; };
+		AF072573293D28420097D992 /* OTPVerifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF072572293D28420097D992 /* OTPVerifyViewController.swift */; };
 		AF21F9B6293CEED200E5E347 /* utils.APIConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21F9B5293CEED200E5E347 /* utils.APIConnect.swift */; };
 		AF21F9B8293CF4BD00E5E347 /* utils.model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21F9B7293CF4BD00E5E347 /* utils.model.swift */; };
 		AF21F9BA293CF8EE00E5E347 /* utils.validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21F9B9293CF8EE00E5E347 /* utils.validator.swift */; };
@@ -68,6 +70,8 @@
 		6F2ECE610D8FA48DC0E3AEA9 /* Pods-RailTrip-RailTripUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RailTrip-RailTripUITests.debug.xcconfig"; path = "Target Support Files/Pods-RailTrip-RailTripUITests/Pods-RailTrip-RailTripUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A9AC80DD4C22ED453344358E /* Pods-RailTrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RailTrip.release.xcconfig"; path = "Target Support Files/Pods-RailTrip/Pods-RailTrip.release.xcconfig"; sourceTree = "<group>"; };
 		AF07256E293D108D0097D992 /* utils.alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.alert.swift; sourceTree = "<group>"; };
+		AF072570293D28060097D992 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AF072572293D28420097D992 /* OTPVerifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPVerifyViewController.swift; sourceTree = "<group>"; };
 		AF21F9B5293CEED200E5E347 /* utils.APIConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.APIConnect.swift; sourceTree = "<group>"; };
 		AF21F9B7293CF4BD00E5E347 /* utils.model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.model.swift; sourceTree = "<group>"; };
 		AF21F9B9293CF8EE00E5E347 /* utils.validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.validator.swift; sourceTree = "<group>"; };
@@ -179,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				184B64D3293BE13A001B800B /* LoginViewController.swift */,
+				AF072570293D28060097D992 /* RegisterViewController.swift */,
+				AF072572293D28420097D992 /* OTPVerifyViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -433,6 +439,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF072571293D28060097D992 /* RegisterViewController.swift in Sources */,
+				AF072573293D28420097D992 /* OTPVerifyViewController.swift in Sources */,
 				184B64D4293BE13A001B800B /* LoginViewController.swift in Sources */,
 				AF21F9BA293CF8EE00E5E347 /* utils.validator.swift in Sources */,
 				184B6499293BC732001B800B /* ViewController.swift in Sources */,

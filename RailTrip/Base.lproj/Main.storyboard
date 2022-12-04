@@ -201,10 +201,10 @@
             </objects>
             <point key="canvasLocation" x="773.28244274809163" y="-2.1126760563380285"/>
         </scene>
-        <!--View Controller-->
+        <!--Verify View Controller-->
         <scene sceneID="LeQ-yf-NVG">
             <objects>
-                <viewController id="VVg-eZ-cPC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OTPVerifyViewController_ID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VVg-eZ-cPC" customClass="OTPVerifyViewController" customModule="RailTrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pTf-pE-hG0">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -866,10 +866,10 @@
             </objects>
             <point key="canvasLocation" x="1497" y="701"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="kdz-r4-2fr">
             <objects>
-                <viewController id="Ohx-rW-nWs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterViewController_ID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ohx-rW-nWs" customClass="RegisterViewController" customModule="RailTrip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pHU-6q-nJ1">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

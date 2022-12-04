@@ -8,6 +8,7 @@
 import SwiftUI
 import UIKit
 import LGButton
+import PopupDialog
 
 class LoginViewController: UIViewController {
 //    @State var loadingstatus:Bool = false
@@ -57,11 +58,42 @@ class LoginViewController: UIViewController {
 //                    print(error ?? "")
                     switch(statusCode){
                     case 200:
-                        self.present(utilsAlert().AlertWithDisableButton(
-                            title: reponse?.message ?? "",
-                            message: "",
-                            buttontext: "Ok"
-                        ), animated: true, completion: nil)
+                        let AuthDataArray:[String:String] = [
+                            "RefID":String(reponse?.data?.refID ?? "") ,
+                            "Email":inputEmail,
+                        ]
+                        UserDefaults.standard.set(AuthDataArray, forKey: "RailTrip_AuthData")
+                        switch(reponse?.data?.status){
+                        case "login":
+                            //login redirect to otp verify page
+                            let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                            guard let mainVC = mainStoryBoard.instantiateViewController(withIdentifier: "OTPVerifyViewController_ID") as? OTPVerifyViewController else {
+                               return
+                           }
+                            mainVC.modalPresentationStyle = .fullScreen
+                            mainVC.modalTransitionStyle = .crossDissolve
+                    
+                            self.present(mainVC, animated: true, completion: nil)
+                            break
+                        case "register":
+                            //register redirect to register page
+                            let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+                            guard let mainVC = mainStoryBoard.instantiateViewController(withIdentifier: "RegisterViewController_ID") as? RegisterViewController else {
+                               return
+                           }
+                            mainVC.modalPresentationStyle = .fullScreen
+                            mainVC.modalTransitionStyle = .crossDissolve
+                    
+                            self.present(mainVC, animated: true, completion: nil)
+                            break
+                        default:
+                            self.present(utilsAlert().AlertWithDisableButton(
+                                title: reponse?.message ?? "",
+                                message: "Please Try again",
+                                buttontext: "Ok"
+                            ), animated: true, completion: nil)
+                            break
+                        }
                         break
                     default:
                         self.present(utilsAlert().AlertWithDisableButton(
@@ -88,12 +120,6 @@ class LoginViewController: UIViewController {
         }else{
             sender.isLoading = false
         }
-//        sender.isLoading = false
-//        print(utilsValidator().isEmail(input: TFemail.text ?? ""))
-        
-        
-        // Present dialog
-        
 
     }
     //    func dropshadowButton(buttonName:UIButton) {
