@@ -279,6 +279,9 @@
                                         <real key="value" value="27"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnLoginSubmit:" destination="VVg-eZ-cPC" eventType="touchUpInside" id="Zn1-qm-Sl7"/>
+                                </connections>
                             </view>
                             <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="kgz-U7-pKq">
                                 <rect key="frame" x="16" y="296" width="358" height="35"/>
@@ -297,6 +300,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Resend">
                                             <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="btnResendOTP:" destination="VVg-eZ-cPC" eventType="touchUpInside" id="AwV-Yx-XH5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -331,10 +337,15 @@
                             <constraint firstAttribute="trailingMargin" secondItem="nvw-qv-rrc" secondAttribute="trailing" constant="3" id="yd8-JE-2CC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TFotpCode" destination="bxC-XK-RC2" id="XtE-QE-bg6"/>
+                        <outlet property="btnResendOTP" destination="phf-Jb-ohe" id="P5S-Qa-1Pm"/>
+                        <outlet property="labelEmail" destination="sXO-Wq-ysy" id="P0j-Ma-JKT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FyI-26-tmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2215" y="-2"/>
+            <point key="canvasLocation" x="2213.8461538461538" y="-2.1327014218009479"/>
         </scene>
         <!--Info-->
         <scene sceneID="4Qa-n5-zFW">
@@ -849,7 +860,7 @@
         <!--Animated Tab Bar Controller-->
         <scene sceneID="zUE-6e-n5E">
             <objects>
-                <tabBarController id="vh5-Be-3ob" customClass="RAMAnimatedTabBarController" customModule="RAMAnimatedTabBarController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="RAMAnimatedTabBarController_ID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vh5-Be-3ob" customClass="RAMAnimatedTabBarController" customModule="RAMAnimatedTabBarController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UUH-Kv-L79">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -887,7 +898,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username123456" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sR7-u7-gwL">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sR7-u7-gwL">
                                 <rect key="frame" x="33" y="250" width="323" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="gBy-D5-iPx"/>
@@ -904,7 +915,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your Username." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syw-jC-mse">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your name." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syw-jC-mse">
                                 <rect key="frame" x="19" y="201" width="352" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="n17-jX-39O"/>
@@ -926,7 +937,7 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
                                         <color key="value" red="0.16581669669999999" green="0.4139605495" blue="0.79788115530000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="titleString" value="Create Account"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleString" value="Next"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
                                         <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
@@ -946,6 +957,9 @@
                                         <real key="value" value="27"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnNameSubmit:" destination="Ohx-rW-nWs" eventType="touchUpInside" id="Juk-Y3-f8n"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="goB-yj-T4L"/>
@@ -968,6 +982,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="4ax-ev-pX7" secondAttribute="trailing" constant="3" id="zZf-dP-Uvb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TFname" destination="sR7-u7-gwL" id="BRF-DE-Bi0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nsd-Cz-rQl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

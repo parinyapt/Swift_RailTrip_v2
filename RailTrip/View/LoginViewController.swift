@@ -5,7 +5,6 @@
 //  Created by Trin Pongsri on 4/12/2565 BE.
 //
 
-import SwiftUI
 import UIKit
 import LGButton
 import PopupDialog
@@ -58,11 +57,8 @@ class LoginViewController: UIViewController {
 //                    print(error ?? "")
                     switch(statusCode){
                     case 200:
-                        let AuthDataArray:[String:String] = [
-                            "RefID":String(reponse?.data?.refID ?? "") ,
-                            "Email":inputEmail,
-                        ]
-                        UserDefaults.standard.set(AuthDataArray, forKey: "RailTrip_AuthData")
+                        UserDefaults.standard.set(String(reponse?.data?.refID ?? ""), forKey: "RailTrip_AuthData_RefID")
+                        UserDefaults.standard.set(inputEmail, forKey: "RailTrip_AuthData_Email")
                         switch(reponse?.data?.status){
                         case "login":
                             //login redirect to otp verify page
