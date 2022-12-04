@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -241,10 +240,8 @@
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                             </label>
-
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An SMS code was sent to" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hLb-EK-aae">
-                                <rect key="frame" x="19" y="131" width="352" height="28"/>
-
+                                <rect key="frame" x="19" y="131" width="337" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="IKN-62-BJF"/>
                                 </constraints>
@@ -343,15 +340,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="nvw-qv-rrc" secondAttribute="trailing" constant="3" id="yd8-JE-2CC"/>
                         </constraints>
                     </view>
-
+                    <size key="freeformSize" width="375" height="812"/>
                     <connections>
                         <outlet property="TFotpCode" destination="bxC-XK-RC2" id="XtE-QE-bg6"/>
                         <outlet property="btnResendOTP" destination="phf-Jb-ohe" id="P5S-Qa-1Pm"/>
                         <outlet property="labelEmail" destination="sXO-Wq-ysy" id="P0j-Ma-JKT"/>
                     </connections>
-
-                    <size key="freeformSize" width="375" height="812"/>
-
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FyI-26-tmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1552,12 +1546,8 @@
         <!--Animated Tab Bar Controller-->
         <scene sceneID="zUE-6e-n5E">
             <objects>
-
                 <tabBarController storyboardIdentifier="RAMAnimatedTabBarController_ID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vh5-Be-3ob" customClass="RAMAnimatedTabBarController" customModule="RAMAnimatedTabBarController" sceneMemberID="viewController">
-
-                
                     <size key="freeformSize" width="375" height="812"/>
-
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UUH-Kv-L79">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1594,10 +1584,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule"/>
                             </button>
-
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sR7-u7-gwL">
-                                <rect key="frame" x="33" y="250" width="323" height="34"/>
-
+                                <rect key="frame" x="33" y="250" width="308" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="gBy-D5-iPx"/>
                                 </constraints>
@@ -1613,10 +1601,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your name." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="syw-jC-mse">
-                                <rect key="frame" x="19" y="201" width="352" height="28"/>
-
+                                <rect key="frame" x="19" y="201" width="337" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="n17-jX-39O"/>
                                 </constraints>
@@ -1624,12 +1610,9 @@
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NhQ-FD-P9h" customClass="LGButton" customModule="LGButton">
-                                <rect key="frame" x="19" y="320" width="355" height="55"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NhQ-FD-P9h" customClass="LGButton" customModule="LGButton">
+                                <rect key="frame" x="19" y="320" width="337" height="55"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="3ME-go-uV3"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
                                         <color key="value" name="AccentColor"/>
@@ -1686,39 +1669,16 @@
                             <constraint firstAttribute="trailingMargin" secondItem="4ax-ev-pX7" secondAttribute="trailing" constant="3" id="zZf-dP-Uvb"/>
                         </constraints>
                     </view>
-
+                    <size key="freeformSize" width="375" height="812"/>
                     <connections>
                         <outlet property="TFname" destination="sR7-u7-gwL" id="BRF-DE-Bi0"/>
                     </connections>
-
-                    <size key="freeformSize" width="375" height="812"/>
-
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nsd-Cz-rQl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1496.1538461538462" y="-2.1327014218009479"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="6Ht-ph-GlD">
-            <size key="intrinsicContentSize" width="10" height="10"/>
-        </designable>
-        <designable name="6k0-vh-8Co">
-            <size key="intrinsicContentSize" width="10" height="10"/>
-        </designable>
-        <designable name="NhQ-FD-P9h">
-            <size key="intrinsicContentSize" width="10" height="10"/>
-        </designable>
-        <designable name="Oh4-7r-h0O">
-            <size key="intrinsicContentSize" width="10" height="10"/>
-        </designable>
-        <designable name="f0G-2U-xdc">
-            <size key="intrinsicContentSize" width="10" height="10"/>
-        </designable>
-        <designable name="xb5-ng-LV9">
-            <size key="intrinsicContentSize" width="10" height="10"/>
-        </designable>
-    </designables>
     <resources>
         <image name="ARL" width="200" height="200"/>
         <image name="BTS" width="200" height="200"/>
