@@ -24,6 +24,12 @@ class LoginViewController: UIViewController {
         BackendConnect().demoprint()
         
         BackendConnect().demoprint()
+        
+        BackendConnect().demoprint()
+        
+        BackendConnect().demoprint()
+        
+        BackendConnect().demoprint()
     }
     //    func dropshadowButton(buttonName:UIButton) {
 //
