@@ -20,6 +20,10 @@ class LoginViewController: UIViewController {
     
     @IBAction func btnLoginSubmit(_ sender: Any) {
         BackendConnect().demoprint()
+        
+        BackendConnect().demoprint()
+        
+        BackendConnect().demoprint()
     }
     //    func dropshadowButton(buttonName:UIButton) {
 //
