@@ -8,7 +8,7 @@ target 'RailTrip' do
   # Pods for RailTrip
 pod 'RAMAnimatedTabBarController'
 pod 'LGButton'
-
+pod 'SkeletonView'
 
   target 'RailTripTests' do
     inherit! :search_paths

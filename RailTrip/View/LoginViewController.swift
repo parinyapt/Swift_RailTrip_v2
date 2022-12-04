@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import SkeletonView
 
 class LoginViewController: UIViewController {
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //view.showAnimatedSkeleton()
 
         // Do any additional setup after loading the view.
     }
