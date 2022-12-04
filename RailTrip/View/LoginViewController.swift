@@ -10,6 +10,7 @@ import SkeletonView
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var TFemail: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,17 +20,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func btnLoginSubmit(_ sender: Any) {
-        BackendConnect().demoprint()
-        
-        BackendConnect().demoprint()
-        
-        BackendConnect().demoprint()
-        
-        BackendConnect().demoprint()
-        
-        BackendConnect().demoprint()
-        
-        BackendConnect().demoprint()
+        print(utilsValidator().isEmail(input: TFemail.text ?? ""))
     }
     //    func dropshadowButton(buttonName:UIButton) {
 //
