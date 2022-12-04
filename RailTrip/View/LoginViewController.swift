@@ -21,7 +21,6 @@ class LoginViewController: UIViewController {
     
     @IBAction func btnLoginSubmit(_ sender: Any) {
         print(utilsValidator().isEmail(input: TFemail.text ?? ""))
-        
     }
     //    func dropshadowButton(buttonName:UIButton) {
 //
