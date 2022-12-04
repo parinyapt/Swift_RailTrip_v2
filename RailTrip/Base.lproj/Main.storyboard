@@ -673,9 +673,6 @@
         </scene>
     </scenes>
     <designables>
-        <designable name="6k0-vh-8Co">
-            <size key="intrinsicContentSize" width="10" height="10"/>
-        </designable>
         <designable name="NhQ-FD-P9h">
             <size key="intrinsicContentSize" width="10" height="10"/>
         </designable>
