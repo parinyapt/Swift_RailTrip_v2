@@ -1610,8 +1610,8 @@
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NhQ-FD-P9h" customClass="LGButton" customModule="LGButton">
-                                <rect key="frame" x="19" y="320" width="337" height="55"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NhQ-FD-P9h" customClass="LGButton" customModule="LGButton">
+                                <rect key="frame" x="19" y="314" width="337" height="55"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
@@ -1679,6 +1679,26 @@
             <point key="canvasLocation" x="1496.1538461538462" y="-2.1327014218009479"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="6Ht-ph-GlD">
+            <size key="intrinsicContentSize" width="10" height="10"/>
+        </designable>
+        <designable name="6k0-vh-8Co">
+            <size key="intrinsicContentSize" width="10" height="10"/>
+        </designable>
+        <designable name="NhQ-FD-P9h">
+            <size key="intrinsicContentSize" width="10" height="10"/>
+        </designable>
+        <designable name="Oh4-7r-h0O">
+            <size key="intrinsicContentSize" width="10" height="10"/>
+        </designable>
+        <designable name="f0G-2U-xdc">
+            <size key="intrinsicContentSize" width="10" height="10"/>
+        </designable>
+        <designable name="xb5-ng-LV9">
+            <size key="intrinsicContentSize" width="10" height="10"/>
+        </designable>
+    </designables>
     <resources>
         <image name="ARL" width="200" height="200"/>
         <image name="BTS" width="200" height="200"/>
