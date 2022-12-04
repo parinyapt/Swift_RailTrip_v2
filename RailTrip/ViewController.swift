@@ -16,7 +16,9 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
+    
     var player: AVPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         playBackgroundVideo()
@@ -43,8 +45,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func showLoginViewController(_ sender: Any) {
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let secondVC = storyboard.instantiateViewController(identifier: "Login")
+        
         
         secondVC.modalPresentationStyle = .fullScreen
         secondVC.modalTransitionStyle = .crossDissolve
