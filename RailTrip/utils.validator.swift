@@ -13,4 +13,8 @@ class utilsValidator {
     func isEmail(input:String) -> Bool {
         return Validator.isEmail().apply(input)
     }
+    
+    func isEmpty(input:String) -> Bool {
+        return Validator.required().apply(input)
+    }
 }

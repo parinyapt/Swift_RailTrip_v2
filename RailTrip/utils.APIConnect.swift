@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class BackendConnect {
+class utilsAPIConnect {
     let BASE_URL = "https://railtrip-api.prinpt.com/api/v1"
     let API_VERSION = "v1"
     
@@ -22,8 +22,9 @@ class BackendConnect {
         }
     }
     
-    func RequestOTP(email:String, completion: @escaping (DefaultAPIResponse<RequestOTPResponse>?, Bool) -> Void) {
+    func RequestOTP(email:String, completion: @escaping (DefaultAPIResponse<RequestOTPResponse>?, Int, Bool) -> Void) {
         typealias reponseStruct = DefaultAPIResponse<RequestOTPResponse>
+//        typealias responseError = DefaultAPIResponseError
         let url = "\(BASE_URL)/auth/request-otp"
         
         let headers: HTTPHeaders = [
@@ -43,10 +44,18 @@ class BackendConnect {
         ).responseDecodable(of: reponseStruct.self) { response in
             switch(response.result){
             case .success:
-                completion(response.value,false)
+                completion(response.value,response.response?.statusCode ?? 0,false)
                 break
             case .failure:
-                completion(response.value,true)
+//                do {
+//                    let rawdata = String(data: response.data!, encoding: String.Encoding.utf8)
+//                    let responsedata = try JSONDecoder().decode(responseError.self, from: Data(rawdata!.utf8))
+//                    completion(nil,responsedata,true)
+//                }catch{
+//                    print(error.localizedDescription)
+//                    completion(nil,nil,true)
+//                }
+                completion(nil,response.response?.statusCode ?? 0,true)
                 break
             }
         }
