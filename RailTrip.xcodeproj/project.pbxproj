@@ -18,7 +18,6 @@
 		184B64B8293BC733001B800B /* RailTripUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B64B7293BC733001B800B /* RailTripUITestsLaunchTests.swift */; };
 		184B64D1293BE0D1001B800B /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 184B64D0293BE0D1001B800B /* video.mp4 */; };
 		184B64D4293BE13A001B800B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184B64D3293BE13A001B800B /* LoginViewController.swift */; };
-		189A1334293C8FCC00367E64 /* RAMAnimatedTabBarController in Frameworks */ = {isa = PBXBuildFile; productRef = 189A1333293C8FCC00367E64 /* RAMAnimatedTabBarController */; };
 		2E7965ABA3B284A9E3647878 /* Pods_RailTrip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AE76937E0EA1C8429B6C71A /* Pods_RailTrip.framework */; };
 		725506D2CB0DF39B96C1E4AB /* Pods_RailTripTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 327D7613ABCE6A6E34A8606C /* Pods_RailTripTests.framework */; };
 		FD6EB8416073E7FB99FBFE2D /* Pods_RailTrip_RailTripUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E453129FBAA4BFE5F654B15E /* Pods_RailTrip_RailTripUITests.framework */; };
@@ -73,7 +72,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				189A1334293C8FCC00367E64 /* RAMAnimatedTabBarController in Frameworks */,
 				2E7965ABA3B284A9E3647878 /* Pods_RailTrip.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,15 +192,13 @@
 				184B648D293BC732001B800B /* Sources */,
 				184B648E293BC732001B800B /* Frameworks */,
 				184B648F293BC732001B800B /* Resources */,
+				6778EC7A5659AF08592955EB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = RailTrip;
-			packageProductDependencies = (
-				189A1333293C8FCC00367E64 /* RAMAnimatedTabBarController */,
-			);
 			productName = RailTrip;
 			productReference = 184B6491293BC732001B800B /* RailTrip.app */;
 			productType = "com.apple.product-type.application";
@@ -234,6 +230,7 @@
 				184B64AD293BC733001B800B /* Sources */,
 				184B64AE293BC733001B800B /* Frameworks */,
 				184B64AF293BC733001B800B /* Resources */,
+				D88EE0C857E7C7B61754F80E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -277,9 +274,6 @@
 				Base,
 			);
 			mainGroup = 184B6488293BC732001B800B;
-			packageReferences = (
-				189A1332293C8FCC00367E64 /* XCRemoteSwiftPackageReference "animated-tab-bar" */,
-			);
 			productRefGroup = 184B6492293BC732001B800B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -342,6 +336,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6778EC7A5659AF08592955EB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RailTrip/Pods-RailTrip-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RailTrip/Pods-RailTrip-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RailTrip/Pods-RailTrip-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A838F6FC6F307E88269EC941 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -362,6 +373,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D88EE0C857E7C7B61754F80E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RailTrip-RailTripUITests/Pods-RailTrip-RailTripUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RailTrip-RailTripUITests/Pods-RailTrip-RailTripUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RailTrip-RailTripUITests/Pods-RailTrip-RailTripUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EFD9FD948DDB6D0C7732A7B4 /* [CP] Check Pods Manifest.lock */ = {
@@ -738,25 +766,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		189A1332293C8FCC00367E64 /* XCRemoteSwiftPackageReference "animated-tab-bar" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Ramotion/animated-tab-bar";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		189A1333293C8FCC00367E64 /* RAMAnimatedTabBarController */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 189A1332293C8FCC00367E64 /* XCRemoteSwiftPackageReference "animated-tab-bar" */;
-			productName = RAMAnimatedTabBarController;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 184B6489293BC732001B800B /* Project object */;
 }

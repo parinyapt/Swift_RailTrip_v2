@@ -37,13 +37,25 @@ class ViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidReachEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player!.currentItem)
         player!.seek(to: CMTime.zero)
         player!.play()
-        self.player?.isMuted = true
+        //self.player?.isMuted = true
     }
     
     @objc func  playerItemDidReachEnd(){
         player!.seek(to: CMTime.zero)
     }
+    
+    
+    @IBAction func Test(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let secondVC = storyboard.instantiateViewController(identifier: "Login")
+        
+        
+        secondVC.modalPresentationStyle = .fullScreen
+        secondVC.modalTransitionStyle = .crossDissolve
 
+        show(secondVC, sender: self)
+    }
+    
     @IBAction func showLoginViewController(_ sender: Any) {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
