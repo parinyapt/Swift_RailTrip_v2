@@ -12,6 +12,7 @@ target 'RailTrip' do
   
   pod 'Alamofire'
   pod 'SwiftValidators'
+  pod 'PopupDialog', '~> 1.1'
 
   target 'RailTripTests' do
     inherit! :search_paths
