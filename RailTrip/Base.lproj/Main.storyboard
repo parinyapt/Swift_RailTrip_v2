@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="U6z-HX-fWM">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -126,7 +126,7 @@
             </objects>
             <point key="canvasLocation" x="773.28244274809163" y="-2.1126760563380285"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="CBs-cU-P0w">
             <objects>
                 <viewController id="1AU-5g-Fhn" sceneMemberID="viewController">
@@ -143,15 +143,29 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3SP-xp-Hzn"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="xgc-ox-ije" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
+                    <tabBarItem key="tabBarItem" title="Home" selectedImage="house.fill" catalog="system" id="xgc-ox-ije" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="kzf-m2-Xz5" id="A9I-ca-Jbi"/>
+                        </connections>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebZ-Ww-N5Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="kzf-m2-Xz5" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="51" y="1432"/>
         </scene>
-        <!--Item-->
+        <!--Info-->
         <scene sceneID="cad-VG-raY">
             <objects>
                 <viewController id="f4j-n6-f3d" sceneMemberID="viewController">
@@ -170,13 +184,27 @@
                         <viewLayoutGuide key="safeArea" id="fVq-6b-Pps"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="OH9-Z1-Q2A" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
+                    <tabBarItem key="tabBarItem" title="Info" selectedImage="newspaper.fill" catalog="system" id="OH9-Z1-Q2A" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="nDD-z6-G6Q" id="MPi-SG-Z7c"/>
+                        </connections>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNb-ri-k1f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="nDD-z6-G6Q" customClass="RAMBounceAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="773" y="1432"/>
         </scene>
-        <!--Item-->
+        <!--Activity-->
         <scene sceneID="pIa-eP-cBf">
             <objects>
                 <viewController id="6DO-GM-Oku" sceneMemberID="viewController">
@@ -195,13 +223,27 @@
                         <viewLayoutGuide key="safeArea" id="dB8-RB-XXN"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Rc3-N4-U6r" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
+                    <tabBarItem key="tabBarItem" title="Activity" selectedImage="clock.fill" catalog="system" id="Rc3-N4-U6r" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="V0l-YF-mms" id="41K-uU-qdN"/>
+                        </connections>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwe-tb-YWF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="V0l-YF-mms" customClass="RAMRightRotationAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="1498" y="1432"/>
         </scene>
-        <!--Item-->
+        <!--Setting-->
         <scene sceneID="Daf-tG-y6X">
             <objects>
                 <viewController id="ur9-Tz-04E" sceneMemberID="viewController">
@@ -220,9 +262,23 @@
                         <viewLayoutGuide key="safeArea" id="JWh-Yw-gIm"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="gsS-7P-eqX" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController"/>
+                    <tabBarItem key="tabBarItem" title="Setting" selectedImage="gearshape.fill" catalog="system" id="gsS-7P-eqX" customClass="RAMAnimatedTabBarItem" customModule="RAMAnimatedTabBarController">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="iconColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="animation" destination="JhR-y0-4NS" id="Paa-qK-JOM"/>
+                        </connections>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5LC-Zp-l6s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="JhR-y0-4NS" customClass="RAMLeftRotationAnimation" customModule="RAMAnimatedTabBarController"/>
             </objects>
             <point key="canvasLocation" x="2216" y="1432"/>
         </scene>
@@ -234,6 +290,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="1AU-5g-Fhn" kind="relationship" relationship="viewControllers" id="GOl-wv-3Kn"/>
@@ -372,6 +429,10 @@
     </scenes>
     <resources>
         <image name="Logo" width="1201" height="281"/>
+        <image name="clock.fill" catalog="system" width="128" height="123"/>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="newspaper.fill" catalog="system" width="128" height="112"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
