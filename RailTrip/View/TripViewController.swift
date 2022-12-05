@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class TripViewController: UIViewController {
     @IBOutlet weak var welcomeMessage: UILabel!
@@ -22,13 +23,20 @@ class TripViewController: UIViewController {
         ListTripTableView.delegate = self
         ListTripTableView.rowHeight = 110
         
+        
+//        welcomeMessage.showAnimatedGradientSkeleton()
+//        welcomeMessage.isSkeletonable = true
+        
         InitSetupTripList()
         InitSetupWelcomeMessage()
+        
+        
         
     }
     
     func InitSetupWelcomeMessage() {
         welcomeMessage.text = "Hi \(UserDefaults.standard.string(forKey: "RailTrip_User_Name") ?? "")"
+//        welcomeMessage.isSkeletonable = false
     }
     
     func InitSetupTripList() {
@@ -76,6 +84,24 @@ class TripViewController: UIViewController {
         
        
     }
+    
+    @IBAction func btnCreateTrip(_ sender: Any) {
+        UserDefaults.standard.set("createtrip", forKey: "RailTrip_Temp_PreferMode")
+        UserDefaults.standard.set("false", forKey: "RailTrip_Temp_PreferModeStatus")
+        UserDefaults.standard.removeObject(forKey: "RailTrip_Temp_Start_Station")
+        UserDefaults.standard.removeObject(forKey: "RailTrip_Temp_End_Station")
+        
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let mainVC = mainStoryBoard.instantiateViewController(withIdentifier: "ShareSelectStartStationViewController_ID") as? ShareSelectStartStationViewController else {
+           return
+       }
+        
+        mainVC.modalPresentationStyle = .fullScreen
+        mainVC.modalTransitionStyle = .crossDissolve
+
+        self.present(mainVC, animated: true, completion: nil)
+    }
+    
 
 }
 

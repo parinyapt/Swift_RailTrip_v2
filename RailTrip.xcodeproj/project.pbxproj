@@ -34,6 +34,13 @@
 		AFC4EE4D293E4F3500A0CA4B /* StationInfoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4EE4C293E4F3500A0CA4B /* StationInfoListTableViewCell.swift */; };
 		AFC4EE4F293E53D900A0CA4B /* StationInfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4EE4E293E53D900A0CA4B /* StationInfoDetailViewController.swift */; };
 		AFC4EE51293E582300A0CA4B /* StationInfoDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4EE50293E582300A0CA4B /* StationInfoDetailTableViewCell.swift */; };
+		AFC4EE53293E64E500A0CA4B /* RouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4EE52293E64E500A0CA4B /* RouteViewController.swift */; };
+		AFC4EE55293E652100A0CA4B /* ShareSelectStartStationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4EE54293E652100A0CA4B /* ShareSelectStartStationViewController.swift */; };
+		AFC4EE57293E654A00A0CA4B /* ShareSelectEndStationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4EE56293E654A00A0CA4B /* ShareSelectEndStationViewController.swift */; };
+		AFC4EE59293E657600A0CA4B /* ShareSelectRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4EE58293E657600A0CA4B /* ShareSelectRouteViewController.swift */; };
+		AFC4EE5B293E688F00A0CA4B /* ShareSelectStartStationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4EE5A293E688F00A0CA4B /* ShareSelectStartStationTableViewCell.swift */; };
+		AFC4EE5D293E68B500A0CA4B /* ShareSelectEndStationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4EE5C293E68B500A0CA4B /* ShareSelectEndStationTableViewCell.swift */; };
+		AFC4EE5F293E7B6D00A0CA4B /* ShareSelectRouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4EE5E293E7B6D00A0CA4B /* ShareSelectRouteTableViewCell.swift */; };
 		FD6EB8416073E7FB99FBFE2D /* Pods_RailTrip_RailTripUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E453129FBAA4BFE5F654B15E /* Pods_RailTrip_RailTripUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +98,13 @@
 		AFC4EE4C293E4F3500A0CA4B /* StationInfoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationInfoListTableViewCell.swift; sourceTree = "<group>"; };
 		AFC4EE4E293E53D900A0CA4B /* StationInfoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationInfoDetailViewController.swift; sourceTree = "<group>"; };
 		AFC4EE50293E582300A0CA4B /* StationInfoDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationInfoDetailTableViewCell.swift; sourceTree = "<group>"; };
+		AFC4EE52293E64E500A0CA4B /* RouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteViewController.swift; sourceTree = "<group>"; };
+		AFC4EE54293E652100A0CA4B /* ShareSelectStartStationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSelectStartStationViewController.swift; sourceTree = "<group>"; };
+		AFC4EE56293E654A00A0CA4B /* ShareSelectEndStationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSelectEndStationViewController.swift; sourceTree = "<group>"; };
+		AFC4EE58293E657600A0CA4B /* ShareSelectRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSelectRouteViewController.swift; sourceTree = "<group>"; };
+		AFC4EE5A293E688F00A0CA4B /* ShareSelectStartStationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSelectStartStationTableViewCell.swift; sourceTree = "<group>"; };
+		AFC4EE5C293E68B500A0CA4B /* ShareSelectEndStationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSelectEndStationTableViewCell.swift; sourceTree = "<group>"; };
+		AFC4EE5E293E7B6D00A0CA4B /* ShareSelectRouteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSelectRouteTableViewCell.swift; sourceTree = "<group>"; };
 		CFB5E19C2BB9C2627C134FC4 /* Pods-RailTrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RailTrip.debug.xcconfig"; path = "Target Support Files/Pods-RailTrip/Pods-RailTrip.debug.xcconfig"; sourceTree = "<group>"; };
 		E453129FBAA4BFE5F654B15E /* Pods_RailTrip_RailTripUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RailTrip_RailTripUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -206,6 +220,10 @@
 				AFC4EE46293E375000A0CA4B /* TripDetailViewController.swift */,
 				AFC4EE4A293E468A00A0CA4B /* StationInfoListViewController.swift */,
 				AFC4EE4E293E53D900A0CA4B /* StationInfoDetailViewController.swift */,
+				AFC4EE52293E64E500A0CA4B /* RouteViewController.swift */,
+				AFC4EE54293E652100A0CA4B /* ShareSelectStartStationViewController.swift */,
+				AFC4EE56293E654A00A0CA4B /* ShareSelectEndStationViewController.swift */,
+				AFC4EE58293E657600A0CA4B /* ShareSelectRouteViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,6 +245,9 @@
 				AFC4EE48293E3DBD00A0CA4B /* TripDetailTableViewCell.swift */,
 				AFC4EE4C293E4F3500A0CA4B /* StationInfoListTableViewCell.swift */,
 				AFC4EE50293E582300A0CA4B /* StationInfoDetailTableViewCell.swift */,
+				AFC4EE5A293E688F00A0CA4B /* ShareSelectStartStationTableViewCell.swift */,
+				AFC4EE5C293E68B500A0CA4B /* ShareSelectEndStationTableViewCell.swift */,
+				AFC4EE5E293E7B6D00A0CA4B /* ShareSelectRouteTableViewCell.swift */,
 			);
 			path = ViewCustomCell;
 			sourceTree = "<group>";
@@ -475,6 +496,7 @@
 				AFC4EE4B293E468A00A0CA4B /* StationInfoListViewController.swift in Sources */,
 				AF072571293D28060097D992 /* RegisterViewController.swift in Sources */,
 				AFC4EE4D293E4F3500A0CA4B /* StationInfoListTableViewCell.swift in Sources */,
+				AFC4EE5F293E7B6D00A0CA4B /* ShareSelectRouteTableViewCell.swift in Sources */,
 				AF072573293D28420097D992 /* OTPVerifyViewController.swift in Sources */,
 				184B64D4293BE13A001B800B /* LoginViewController.swift in Sources */,
 				AFC4EE45293E217F00A0CA4B /* TripListCell.swift in Sources */,
@@ -483,12 +505,18 @@
 				AFC4EE51293E582300A0CA4B /* StationInfoDetailTableViewCell.swift in Sources */,
 				184B6499293BC732001B800B /* ViewController.swift in Sources */,
 				AFC4EE49293E3DBD00A0CA4B /* TripDetailTableViewCell.swift in Sources */,
+				AFC4EE55293E652100A0CA4B /* ShareSelectStartStationViewController.swift in Sources */,
 				AF07256F293D108D0097D992 /* utils.alert.swift in Sources */,
+				AFC4EE5B293E688F00A0CA4B /* ShareSelectStartStationTableViewCell.swift in Sources */,
+				AFC4EE59293E657600A0CA4B /* ShareSelectRouteViewController.swift in Sources */,
 				AFC4EE42293E208600A0CA4B /* TripViewController.swift in Sources */,
+				AFC4EE57293E654A00A0CA4B /* ShareSelectEndStationViewController.swift in Sources */,
+				AFC4EE5D293E68B500A0CA4B /* ShareSelectEndStationTableViewCell.swift in Sources */,
 				AF21F9B6293CEED200E5E347 /* utils.APIConnect.swift in Sources */,
 				184B6495293BC732001B800B /* AppDelegate.swift in Sources */,
 				AF21F9B8293CF4BD00E5E347 /* utils.model.swift in Sources */,
 				184B6497293BC732001B800B /* SceneDelegate.swift in Sources */,
+				AFC4EE53293E64E500A0CA4B /* RouteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
