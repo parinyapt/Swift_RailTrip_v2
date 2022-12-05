@@ -503,4 +503,187 @@ class utilsAPIConnect {
             }
         }
     }
+    
+    func CreateTrip(name:String,routeID:String,placeID:String, completion: @escaping (DefaultAPIResponse<String>?, Int, Bool) -> Void) {
+        typealias reponseStruct = DefaultAPIResponse<String>
+        let url = "\(BASE_URL)/trip/"
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(UserDefaults.standard.string(forKey: "RailTrip_User_Token") ?? "")",
+            "Accept": "application/json",
+            "Accept-Language": UserDefaults.standard.string(forKey: "RailTrip_User_Language") ?? "en"
+        ]
+        
+        let parameters: [String: String] = [
+            "name": name,
+            "route_id": routeID,
+            "place_id": placeID,
+        ]
+        
+        AF.request(
+            url,
+            method: .post,
+            parameters: parameters,
+            encoder: JSONParameterEncoder.default,
+            headers: headers
+        ).responseDecodable(of: reponseStruct.self) { response in
+            switch(response.result){
+            case .success:
+                completion(response.value,response.response?.statusCode ?? 0,false)
+                break
+            case .failure:
+                completion(nil,response.response?.statusCode ?? 0,true)
+                break
+            }
+        }
+    }
+    
+    struct ListTripResponse: Codable {
+        let fromLinePlatform, fromLineName, fromStationCode, fromStationName: String
+        let toLinePlatform, toLineName, toStationCode, toStationName: String
+        let Price, Time, Station: Int
+        let tripName:String
+        let tripID:Int
+        
+        enum CodingKeys: String, CodingKey {
+            case fromLinePlatform = "from_line_platform"
+            case fromLineName = "from_line_name"
+            case fromStationCode = "from_station_code"
+            case fromStationName = "from_station_name"
+            case toLinePlatform = "to_line_platform"
+            case toLineName = "to_line_name"
+            case toStationCode = "to_station_code"
+            case toStationName = "to_station_name"
+            case Price = "price"
+            case Time = "time"
+            case Station = "station"
+            case tripName = "trip_name"
+            case tripID = "trip_id"
+        }
+    }
+    func ListTrip(completion: @escaping (DefaultAPIResponse<[ListTripResponse]>?, Int, Bool) -> Void) {
+        typealias reponseStruct = DefaultAPIResponse<[ListTripResponse]>
+        let url = "\(BASE_URL)/trip/"
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(UserDefaults.standard.string(forKey: "RailTrip_User_Token") ?? "")",
+            "Accept": "application/json",
+            "Accept-Language": UserDefaults.standard.string(forKey: "RailTrip_User_Language") ?? "en"
+        ]
+        
+        AF.request(
+            url,
+            method: .get,
+            headers: headers
+        ).responseDecodable(of: reponseStruct.self) { response in
+            switch(response.result){
+            case .success:
+                completion(response.value,response.response?.statusCode ?? 0,false)
+                break
+            case .failure:
+                completion(nil,response.response?.statusCode ?? 0,true)
+                break
+            }
+        }
+    }
+    
+    struct TripDetailResponse: Codable {
+        let fromLinePlatform, fromLineName, fromStationCode, fromStationName: String
+        let toLinePlatform, toLineName, toStationCode, toStationName: String
+        let Price, Time, Station: Int
+        let tripName:String
+        let placeDetail:[PlaceDetail]
+        
+        enum CodingKeys: String, CodingKey {
+            case fromLinePlatform = "from_line_platform"
+            case fromLineName = "from_line_name"
+            case fromStationCode = "from_station_code"
+            case fromStationName = "from_station_name"
+            case toLinePlatform = "to_line_platform"
+            case toLineName = "to_line_name"
+            case toStationCode = "to_station_code"
+            case toStationName = "to_station_name"
+            case Price = "price"
+            case Time = "time"
+            case Station = "station"
+            case tripName = "trip_name"
+            case placeDetail = "place_detail"
+        }
+        
+        struct PlaceDetail: Codable {
+            let lineID: Int
+            let linePlatform, lineColor, lineName: String
+            let stationID: Int
+            let stationCode, stationName, placeID, placeName: String
+            let placeLatitude, placeLongitude, placeDistance: String
+            let placeImage: String
+
+            enum CodingKeys: String, CodingKey {
+                case lineID = "line_id"
+                case linePlatform = "line_platform"
+                case lineColor = "line_color"
+                case lineName = "line_name"
+                case stationID = "station_id"
+                case stationCode = "station_code"
+                case stationName = "station_name"
+                case placeID = "place_id"
+                case placeName = "place_name"
+                case placeLatitude = "place_latitude"
+                case placeLongitude = "place_longitude"
+                case placeDistance = "place_distance"
+                case placeImage = "place_image"
+            }
+        }
+    }
+    func TripDetail(TripID:Int, completion: @escaping (DefaultAPIResponse<TripDetailResponse>?, Int, Bool) -> Void) {
+        typealias reponseStruct = DefaultAPIResponse<TripDetailResponse>
+        let url = "\(BASE_URL)/trip/\(TripID)"
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(UserDefaults.standard.string(forKey: "RailTrip_User_Token") ?? "")",
+            "Accept": "application/json",
+            "Accept-Language": UserDefaults.standard.string(forKey: "RailTrip_User_Language") ?? "en"
+        ]
+        
+        AF.request(
+            url,
+            method: .get,
+            headers: headers
+        ).responseDecodable(of: reponseStruct.self) { response in
+            switch(response.result){
+            case .success:
+                completion(response.value,response.response?.statusCode ?? 0,false)
+                break
+            case .failure:
+                completion(nil,response.response?.statusCode ?? 0,true)
+                break
+            }
+        }
+    }
+    
+    func DeleteTrip(TripID:Int, completion: @escaping (DefaultAPIResponse<String>?, Int, Bool) -> Void) {
+        typealias reponseStruct = DefaultAPIResponse<String>
+        let url = "\(BASE_URL)/trip/\(TripID)"
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(UserDefaults.standard.string(forKey: "RailTrip_User_Token") ?? "")",
+            "Accept": "application/json",
+            "Accept-Language": UserDefaults.standard.string(forKey: "RailTrip_User_Language") ?? "en"
+        ]
+        
+        AF.request(
+            url,
+            method: .delete,
+            headers: headers
+        ).responseDecodable(of: reponseStruct.self) { response in
+            switch(response.result){
+            case .success:
+                completion(response.value,response.response?.statusCode ?? 0,false)
+                break
+            case .failure:
+                completion(nil,response.response?.statusCode ?? 0,true)
+                break
+            }
+        }
+    }
 }

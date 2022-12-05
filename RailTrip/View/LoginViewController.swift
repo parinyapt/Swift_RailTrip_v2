@@ -21,24 +21,23 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         
-        utilsAPIConnect().RouteDetail(RouteID: 12980) { response,statusCode,error in
+        utilsAPIConnect().DeleteTrip(TripID: 9) { response,statusCode,error in
             switch(error){
             case false:
                 switch(statusCode){
                 case 200:
                     print("========200========")
-//                    print(response)
+                    print(response)
+//                    print(UserDefaults.standard.string(forKey: "RailTrip_User_Token") ?? "")
 //                    print(response?.data?.count ?? 0)
-                    for datax in response?.data?.stationList ?? [] {
-                        print(datax.StationName)
-//                        print(datax.price)
-//
-//                        print(datax.time)
-////                        print(datax.LinePlatform)
-                    }
+//                    for datax in response?.data ?? [] {
+//                        print(datax.tripName)
+//                        print(datax.tripID)
+//                    }
                     break
                 default:
                     print("========default========")
+                    print(response)
                     break
                 }
                 
