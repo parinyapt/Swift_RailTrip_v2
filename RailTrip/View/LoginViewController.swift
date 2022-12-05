@@ -21,32 +21,32 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         
-        utilsAPIConnect().DeleteTrip(TripID: 9) { response,statusCode,error in
-            switch(error){
-            case false:
-                switch(statusCode){
-                case 200:
-                    print("========200========")
-                    print(response)
-//                    print(UserDefaults.standard.string(forKey: "RailTrip_User_Token") ?? "")
-//                    print(response?.data?.count ?? 0)
-//                    for datax in response?.data ?? [] {
-//                        print(datax.tripName)
-//                        print(datax.tripID)
-//                    }
-                    break
-                default:
-                    print("========default========")
-                    print(response)
-                    break
-                }
-                
-                break
-            case true:
-                print("========error========")
-                break
-            }
-        }
+//        utilsAPIConnect().DeleteTrip(TripID: 9) { response,statusCode,error in
+//            switch(error){
+//            case false:
+//                switch(statusCode){
+//                case 200:
+//                    print("========200========")
+//                    print(response)
+////                    print(UserDefaults.standard.string(forKey: "RailTrip_User_Token") ?? "")
+////                    print(response?.data?.count ?? 0)
+////                    for datax in response?.data ?? [] {
+////                        print(datax.tripName)
+////                        print(datax.tripID)
+////                    }
+//                    break
+//                default:
+//                    print("========default========")
+//                    print(response)
+//                    break
+//                }
+//                
+//                break
+//            case true:
+//                print("========error========")
+//                break
+//            }
+//        }
         
         
     }
