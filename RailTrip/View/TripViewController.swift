@@ -27,11 +27,16 @@ class TripViewController: UIViewController {
 //        welcomeMessage.showAnimatedGradientSkeleton()
 //        welcomeMessage.isSkeletonable = true
         
+//        InitSetupTripList()
+//        InitSetupWelcomeMessage()
+        
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         InitSetupTripList()
         InitSetupWelcomeMessage()
-        
-        
-        
     }
     
     func InitSetupWelcomeMessage() {
@@ -40,6 +45,7 @@ class TripViewController: UIViewController {
     }
     
     func InitSetupTripList() {
+        apiData.removeAll()
         utilsAPIConnect().ListTrip() { response,statusCode,error in
             switch(error){
             case false:
@@ -59,8 +65,12 @@ class TripViewController: UIViewController {
                     }
                     self.ListTripTableView.reloadData()
                     break
+                case 404:
+                    print("404")
+                    break
                 default:
                     print("default")
+//                    print(response)
                     self.present(utilsAlert().AlertWithDisableButton(
                         title: "Error Occured",
                         message: response?.message ?? "",
@@ -90,6 +100,7 @@ class TripViewController: UIViewController {
         UserDefaults.standard.set("false", forKey: "RailTrip_Temp_PreferModeStatus")
         UserDefaults.standard.removeObject(forKey: "RailTrip_Temp_Start_Station")
         UserDefaults.standard.removeObject(forKey: "RailTrip_Temp_End_Station")
+        UserDefaults.standard.removeObject(forKey: "RailTrip_Temp_RouteID")
         
         let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let mainVC = mainStoryBoard.instantiateViewController(withIdentifier: "ShareSelectStartStationViewController_ID") as? ShareSelectStartStationViewController else {

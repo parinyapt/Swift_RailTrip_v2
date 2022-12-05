@@ -1,5 +1,5 @@
 //
-//  ShareSelectRouteViewController.swift
+//  RouteDetailViewController.swift
 //  RailTrip
 //
 //  Created by Parinya Termkasipanich on 6/12/2565 BE.
@@ -7,12 +7,13 @@
 
 import UIKit
 
-class ShareSelectRouteViewController: UIViewController {
-
-    var apiDataSingle:[String:String] = [:]
-    var apiDataArray = [[String:Int]]()
-    var apiDataplatform:[[String]] = []
+class RouteDetailViewController: UIViewController {
     
+    var apiDataSingle:[String:String] = [:]
+    var apiDataArray = [[String:String]]()
+    
+    var get_routeID:Int = Int(UserDefaults.standard.string(forKey: "RailTrip_Temp_RouteID") ?? "") ?? 0
+
     @IBOutlet weak var LBStartStationName: UILabel!
     @IBOutlet weak var LBStartPlatform: UILabel!
     @IBOutlet weak var LBStartStationCode: UILabel!
@@ -29,24 +30,12 @@ class ShareSelectRouteViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         tableViewInstance.dataSource = self
         tableViewInstance.delegate = self
-        tableViewInstance.rowHeight = 110
-        
-        InitSetupSingleData()
-        InitSetup()
-
+        tableViewInstance.rowHeight = 50
         // Do any additional setup after loading the view.
-//        print(UserDefaults.standard.string(forKey: "RailTrip_Temp_PreferMode"))
-//        print(UserDefaults.standard.string(forKey: "RailTrip_Temp_Start_Station"))
-//        print(UserDefaults.standard.string(forKey: "RailTrip_Temp_End_Station"))
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        if UserDefaults.standard.string(forKey: "RailTrip_Temp_PreferModeStatus") == "true" {
-            self.dismiss(animated: false)
-        }
+        InitSetup()
     }
     
     func InitSetupSingleData() {
@@ -66,8 +55,7 @@ class ShareSelectRouteViewController: UIViewController {
     func InitSetup() {
         apiDataSingle.removeAll()
         apiDataArray.removeAll()
-        apiDataplatform.removeAll()
-        utilsAPIConnect().ListAllRoute(StartStationCode: UserDefaults.standard.string(forKey: "RailTrip_Temp_Start_Station") ?? "", EndStationCode: UserDefaults.standard.string(forKey: "RailTrip_Temp_End_Station") ?? "") { response,statusCode,error in
+        utilsAPIConnect().RouteDetail(RouteID: get_routeID) { response,statusCode,error in
             switch(error){
             case false:
                 switch(statusCode){
@@ -84,18 +72,13 @@ class ShareSelectRouteViewController: UIViewController {
                     self.apiDataSingle["Time"] = String(response?.data?.minTime ?? 0)
                     self.apiDataSingle["Station"] = String(response?.data?.minStation ?? 0)
                     
-                    for data in response?.data?.route ?? [] {
-                        let temp:[String:Int] = [
-                            "routeID": data.routeID,
-                            "price": data.price,
-                            "time": data.time,
-                            "station": data.station,
+                    for data in response?.data?.stationList ?? [] {
+                        let temp:[String:String] = [
+                            "LinePlatform": data.LinePlatform,
+                            "StationCode": data.StationCode,
+                            "StationName": data.StationName,
                         ]
                         self.apiDataArray.append(temp)
-                        self.apiDataplatform.append(data.platform)
-//                        for pf in data.platform {
-//                            self.apiDataplatform.append(pf)
-//                        }
                     }
                     
                     self.tableViewInstance.reloadData()
@@ -133,48 +116,24 @@ class ShareSelectRouteViewController: UIViewController {
 
 }
 
-extension ShareSelectRouteViewController: UITableViewDataSource {
+extension RouteDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.apiDataArray.count
     }
 }
 
-extension ShareSelectRouteViewController: UITableViewDelegate {
+extension RouteDetailViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableViewInstance.dequeueReusableCell(withIdentifier: "ShareSelectRouteTableViewCell_ID", for: indexPath) as! ShareSelectRouteTableViewCell
+        let cell = tableViewInstance.dequeueReusableCell(withIdentifier: "RouteDetailTableViewCell_ID", for: indexPath) as! RouteDetailTableViewCell
         cell.config(
-            price: self.apiDataArray[indexPath.item]["price"] ?? 0,
-            time: self.apiDataArray[indexPath.item]["time"] ?? 0,
-            station: self.apiDataArray[indexPath.item]["station"] ?? 0,
-            image: apiDataplatform[indexPath.item]
+            image: self.apiDataArray[indexPath.item]["LinePlatform"] ?? "",
+            platform: self.apiDataArray[indexPath.item]["LinePlatform"] ?? "",
+            stationCode: self.apiDataArray[indexPath.item]["StationCode"] ?? "",
+            stationName: self.apiDataArray[indexPath.item]["StationName"] ?? ""
         )
 
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        
-        UserDefaults.standard.set(self.apiDataArray[indexPath.item]["routeID"] ?? 0, forKey: "RailTrip_Temp_RouteID")
-        
-        if UserDefaults.standard.string(forKey: "RailTrip_Temp_PreferMode") == "createtrip" {
-            guard let mainVC = mainStoryBoard.instantiateViewController(withIdentifier: "CreateTripViewController_ID") as? CreateTripViewController else {
-               return
-           }
-            mainVC.modalPresentationStyle = .fullScreen
-            mainVC.modalTransitionStyle = .crossDissolve
-
-            self.present(mainVC, animated: true, completion: nil)
-        }else{
-            guard let mainVC = mainStoryBoard.instantiateViewController(withIdentifier: "RouteDetailViewController_ID") as? RouteDetailViewController else {
-               return
-           }
-            mainVC.modalPresentationStyle = .fullScreen
-            mainVC.modalTransitionStyle = .crossDissolve
-
-            self.present(mainVC, animated: true, completion: nil)
-        }
-
-        
-    }
 }
+

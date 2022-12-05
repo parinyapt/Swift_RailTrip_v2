@@ -42,6 +42,8 @@ class StationInfoDetailViewController: UIViewController {
     }
     
     func InitSetup() {
+        apiDataSingle.removeAll()
+        apiDataArray.removeAll()
         utilsAPIConnect().StationDetail(stationID: get_station_id) { response,statusCode,error in
             switch(error){
             case false:

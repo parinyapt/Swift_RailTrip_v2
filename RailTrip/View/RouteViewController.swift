@@ -26,6 +26,7 @@ class RouteViewController: UIViewController {
         UserDefaults.standard.set("false", forKey: "RailTrip_Temp_PreferModeStatus")
         UserDefaults.standard.removeObject(forKey: "RailTrip_Temp_Start_Station")
         UserDefaults.standard.removeObject(forKey: "RailTrip_Temp_End_Station")
+        UserDefaults.standard.removeObject(forKey: "RailTrip_Temp_RouteID")
         
         let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
         guard let mainVC = mainStoryBoard.instantiateViewController(withIdentifier: "ShareSelectStartStationViewController_ID") as? ShareSelectStartStationViewController else {

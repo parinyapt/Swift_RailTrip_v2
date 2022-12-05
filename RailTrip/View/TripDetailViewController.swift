@@ -62,6 +62,8 @@ class TripDetailViewController: UIViewController {
     }
     
     func InitSetupTripList() {
+        apiDataSingle.removeAll()
+        apiDataArray.removeAll()
         utilsAPIConnect().TripDetail(TripID: get_tripID) { response,statusCode,error in
             switch(error){
             case false:

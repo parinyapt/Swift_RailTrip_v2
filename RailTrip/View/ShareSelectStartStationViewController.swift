@@ -18,10 +18,6 @@ class ShareSelectStartStationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if UserDefaults.standard.string(forKey: "RailTrip_Temp_PreferModeStatus") == "true" {
-            self.dismiss(animated: true)
-        }
-        
         // Do any additional setup after loading the view.
         tableViewInstance.dataSource = self
         tableViewInstance.delegate = self
@@ -30,12 +26,19 @@ class ShareSelectStartStationViewController: UIViewController {
         InitSetupTableView()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDefaults.standard.string(forKey: "RailTrip_Temp_PreferModeStatus") == "true" {
+            self.dismiss(animated: false)
+        }
+    }
+    
     @IBAction func btnSelectLine(_ sender: UIButton) {
         select_line_id = sender.tag
         InitSetupTableView()
     }
     
     func InitSetupTableView() {
+        apiDataArray.removeAll()
         self.apiDataArray.removeAll()
         utilsAPIConnect().Station(lineID: self.select_line_id) { response,statusCode,error in
             switch(error){

@@ -22,7 +22,9 @@ class StationInfoListViewController: UIViewController {
         tableViewInstance.dataSource = self
         tableViewInstance.delegate = self
         tableViewInstance.rowHeight = 70
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         InitSetupTableView()
     }
     
