@@ -19,6 +19,36 @@ class LoginViewController: UIViewController {
         //view.showAnimatedSkeleton()
 
         // Do any additional setup after loading the view.
+        
+        
+        utilsAPIConnect().StationDetail(stationID: 51) { response,statusCode,error in
+            switch(error){
+            case false:
+                switch(statusCode){
+                case 200:
+                    print("========200========")
+//                    print(response)
+                    print(response?.data?.StationLink?.count ?? 0)
+                    for datax in response?.data?.StationLink ?? [] {
+                        print(datax)
+//                        print(datax.LineID)
+//                        print(datax.LineName)
+//                        print(datax.LinePlatform)
+                    }
+                    break
+                default:
+                    print("========default========")
+                    break
+                }
+                
+                break
+            case true:
+                print("========error========")
+                break
+            }
+        }
+        
+        
     }
     
     @IBAction func btnLoginSubmit(_ sender: LGButton) {
