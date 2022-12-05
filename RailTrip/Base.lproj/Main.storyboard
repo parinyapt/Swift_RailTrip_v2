@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vh5-Be-3ob">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VVg-eZ-cPC">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -249,12 +249,10 @@
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6k0-vh-8Co" customClass="LGButton" customModule="LGButton">
-                                <rect key="frame" x="19" y="339" width="337" height="55"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6k0-vh-8Co" customClass="LGButton" customModule="LGButton">
+                                <rect key="frame" x="19" y="353" width="337" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="UWT-KW-xr3"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
                                         <color key="value" name="AccentColor"/>
@@ -312,6 +310,26 @@
                                     <constraint firstAttribute="height" constant="35" id="RF7-2g-55c"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x9w-tI-yfD">
+                                <rect key="frame" x="19" y="338" width="337" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lb-Ro-53z">
+                                <rect key="frame" x="222" y="417" width="81" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Change">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="14"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Is it your email? If not," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5N4-SS-EUC">
+                                <rect key="frame" x="72" y="416" width="158" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HBM-rL-C13"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -322,7 +340,6 @@
                             <constraint firstItem="sXO-Wq-ysy" firstAttribute="leading" secondItem="pTf-pE-hG0" secondAttribute="leadingMargin" constant="3" id="GJd-GP-KRE"/>
                             <constraint firstAttribute="bottom" secondItem="bje-Cm-uRg" secondAttribute="bottom" id="Ie2-6E-Sap"/>
                             <constraint firstItem="kgz-U7-pKq" firstAttribute="leading" secondItem="pTf-pE-hG0" secondAttribute="leadingMargin" id="Ieh-be-XhW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6k0-vh-8Co" secondAttribute="trailing" constant="3" id="Jzz-yy-MBV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sXO-Wq-ysy" secondAttribute="trailing" constant="3" id="KGv-Sq-e1r"/>
                             <constraint firstItem="kgz-U7-pKq" firstAttribute="trailing" secondItem="pTf-pE-hG0" secondAttribute="trailingMargin" id="TSN-cA-KdN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bxC-XK-RC2" secondAttribute="trailing" constant="18" id="UyW-VZ-CsX"/>
@@ -332,10 +349,8 @@
                             <constraint firstItem="hLb-EK-aae" firstAttribute="top" secondItem="pTf-pE-hG0" secondAttribute="topMargin" constant="84" id="ebH-3f-m3H"/>
                             <constraint firstItem="kgz-U7-pKq" firstAttribute="top" secondItem="pTf-pE-hG0" secondAttribute="topMargin" constant="249" id="hhi-WY-cer"/>
                             <constraint firstItem="bxC-XK-RC2" firstAttribute="top" secondItem="pTf-pE-hG0" secondAttribute="topMargin" constant="201" id="lND-6W-Cyg"/>
-                            <constraint firstItem="6k0-vh-8Co" firstAttribute="top" secondItem="pTf-pE-hG0" secondAttribute="topMargin" constant="292" id="mlC-HK-Cyi"/>
                             <constraint firstItem="bje-Cm-uRg" firstAttribute="leading" secondItem="HBM-rL-C13" secondAttribute="leading" id="nuh-EW-I43"/>
                             <constraint firstItem="bxC-XK-RC2" firstAttribute="leading" secondItem="pTf-pE-hG0" secondAttribute="leadingMargin" constant="17" id="pOd-oj-ULi"/>
-                            <constraint firstItem="6k0-vh-8Co" firstAttribute="leading" secondItem="pTf-pE-hG0" secondAttribute="leadingMargin" constant="3" id="s1j-hc-mZy"/>
                             <constraint firstItem="sXO-Wq-ysy" firstAttribute="top" secondItem="pTf-pE-hG0" secondAttribute="topMargin" constant="121" id="vTT-be-xzs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nvw-qv-rrc" secondAttribute="trailing" constant="3" id="yd8-JE-2CC"/>
                         </constraints>
@@ -349,7 +364,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FyI-26-tmP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2213.8461538461538" y="-2.1327014218009479"/>
+            <point key="canvasLocation" x="2213.0769230769229" y="-2.1327014218009479"/>
         </scene>
         <!--Route-->
         <scene sceneID="4Qa-n5-zFW">
