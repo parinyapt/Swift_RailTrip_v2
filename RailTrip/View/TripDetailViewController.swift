@@ -175,15 +175,7 @@ class TripDetailViewController: UIViewController {
     }
     
     @IBAction func btnBackPage(_ sender: Any) {
-        let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        guard let mainVC = mainStoryBoard.instantiateViewController(withIdentifier: "RAMAnimatedTabBarController_ID") as? RAMAnimatedTabBarController else {
-           return
-       }
-        
-        mainVC.modalPresentationStyle = .fullScreen
-        mainVC.modalTransitionStyle = .crossDissolve
-
-        self.present(mainVC, animated: true, completion: nil)
+        self.dismiss(animated: true)
     }
 }
 

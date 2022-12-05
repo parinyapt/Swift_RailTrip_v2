@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class StationInfoDetailTableViewCell: UITableViewCell {
 
@@ -29,7 +30,7 @@ class StationInfoDetailTableViewCell: UITableViewCell {
             DataImage.isHidden = false
             DataLB.isHidden = true
             
-            DataImage.image = UIImage(named: data)
+            DataImage.kf.setImage(with: URL(string: data ))
         }else{
             DataImage.isHidden = true
             DataLB.isHidden = false

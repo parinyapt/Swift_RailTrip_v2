@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Kingfisher
+import RAMAnimatedTabBarController
 
 class StationInfoDetailViewController: UIViewController {
     
@@ -27,7 +29,7 @@ class StationInfoDetailViewController: UIViewController {
         
         tableViewInstance.dataSource = self
         tableViewInstance.delegate = self
-        tableViewInstance.rowHeight = 100
+        tableViewInstance.rowHeight = 80
         
         InitSetup()
         
@@ -36,6 +38,7 @@ class StationInfoDetailViewController: UIViewController {
     
     func InitSetupSingleData() {
         LBstationName.text = "\(apiDataSingle["StationCode"] ?? "") \(apiDataSingle["stationName"] ?? "")"
+        StationImage.kf.setImage(with: URL(string: apiDataSingle["StationImage"] ?? ""))
     }
     
     func InitSetup() {
@@ -49,6 +52,8 @@ class StationInfoDetailViewController: UIViewController {
                     self.apiDataSingle["stationName"] = response?.data?.StationName
                     self.apiDataSingle["StationImage"] = response?.data?.StationImage
                     self.apiDataSingle["StationGoogleMap"] = response?.data?.StationGoogleMap
+                    self.apiDataArray["exit"] = []
+                    self.apiDataArray["facility"] = []
                     
                     for data in response?.data?.StationExit ?? [] {
                         let temp:[String:String] = [
@@ -93,6 +98,30 @@ class StationInfoDetailViewController: UIViewController {
         }
     }
     
+    @IBAction func segmentSelectType(_ sender: Any) {
+        let s:UISegmentedControl = sender as! UISegmentedControl
+//        print(s.selectedSegmentIndex)
+        if s.selectedSegmentIndex == 0 {
+            select_type = "facility"
+        }else{
+            select_type = "exit"
+        }
+        
+        self.tableViewInstance.reloadData()
+    }
+    
+    @IBAction func btnBack(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
+    
+    @IBAction func btnGoogleMap(_ sender: Any) {
+        if let url = URL(string: apiDataSingle["StationGoogleMap"] ?? "") {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:])
+            }
+        }
+    }
 }
 
 extension StationInfoDetailViewController: UITableViewDataSource {

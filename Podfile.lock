@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.6.2)
   - DynamicBlurView (4.1.0)
+  - Kingfisher (7.4.1)
   - LGButton (1.1.6)
   - PopupDialog (1.1.1):
     - DynamicBlurView (~> 4.0)
@@ -10,6 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - Kingfisher (~> 7.0)
   - LGButton
   - PopupDialog (~> 1.1)
   - RAMAnimatedTabBarController
@@ -20,6 +22,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - DynamicBlurView
+    - Kingfisher
     - LGButton
     - PopupDialog
     - RAMAnimatedTabBarController
@@ -29,12 +32,13 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
+  Kingfisher: cd762a593a61b2fbecf7645c00f9a801a3ebfc9c
   LGButton: 9f0a7f9d3030e3f504108342f6b66d64a429371b
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   RAMAnimatedTabBarController: 6863a386e7ae2ab227cd60aa73ab8ff56cdacfdd
   SkeletonView: 5a050f6411e697abd4cda0a8d767013399dccd69
   SwiftValidators: b1cb650ce02ef6ad894f1d471f970b249c794342
 
-PODFILE CHECKSUM: bb47bd8cfe2a04526e6dd075aee9ef110d906caa
+PODFILE CHECKSUM: 1a9073ec05f8720a362d3cc1770a058ab3301e33
 
 COCOAPODS: 1.11.3

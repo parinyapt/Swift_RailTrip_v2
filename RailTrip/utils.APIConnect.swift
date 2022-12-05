@@ -221,8 +221,8 @@ class utilsAPIConnect {
         let StationLongitude:String
         let StationGoogleMap:String
         let StationImage:String
-        let StationExit:[StationDetailExit]
-        let StationFacility:[StationDetailFacility]
+        let StationExit:[StationDetailExit]?
+        let StationFacility:[StationDetailFacility]?
         let StationLink:[StationDetailLink]?
         
         enum CodingKeys: String, CodingKey {

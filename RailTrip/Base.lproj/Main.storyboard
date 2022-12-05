@@ -1289,7 +1289,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yhd-ha-AI2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="47" y="3444"/>
+            <point key="canvasLocation" x="427" y="3445"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="K28-3Q-wPS">
@@ -1425,7 +1425,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okS-yM-kk6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-668.46153846153845" y="2120.6161137440758"/>
+            <point key="canvasLocation" x="48" y="4118"/>
         </scene>
         <!--Station Info Detail View Controller-->
         <scene sceneID="PzT-tL-JkL">
@@ -1449,6 +1449,9 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnBack:" destination="A29-Ct-O18" eventType="touchUpInside" id="BnA-Pp-cPl"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgW-zY-drE">
                                         <rect key="frame" x="156" y="47" width="63" height="29"/>
@@ -1470,6 +1473,9 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnGoogleMap:" destination="A29-Ct-O18" eventType="touchUpInside" id="lVW-U7-hMN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="AccentColor"/>
@@ -1518,12 +1524,6 @@
                                 <rect key="frame" x="0.0" y="137" width="375" height="194"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chang Erawan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCI-Pf-t2Q">
-                                <rect key="frame" x="121" y="102" width="136" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lD9-GP-Rhx">
                                 <rect key="frame" x="16" y="353" width="343" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1531,7 +1531,16 @@
                                     <segment title="Facility"/>
                                     <segment title="Exit"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentSelectType:" destination="A29-Ct-O18" eventType="valueChanged" id="b1A-eY-ctz"/>
+                                </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chang Erawan" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCI-Pf-t2Q">
+                                <rect key="frame" x="42" y="102" width="290" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uKx-nz-WEI"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -1840,7 +1849,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAF-UB-wrB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="773" y="2121"/>
+            <point key="canvasLocation" x="947" y="4118"/>
         </scene>
         <!--Trip Detail View Controller-->
         <scene sceneID="ztK-vJ-fqy">
@@ -2420,7 +2429,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAm-vO-MJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46.92307692307692" y="2120.6161137440758"/>
+            <point key="canvasLocation" x="428" y="2121"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TYW-Sh-HQ3">
@@ -2628,7 +2637,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LKQ-QM-Nqi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="46.92307692307692" y="2792.4170616113743"/>
+            <point key="canvasLocation" x="427" y="2792"/>
         </scene>
         <!--Trip-->
         <scene sceneID="sQ8-V7-K3R">
