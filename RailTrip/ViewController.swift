@@ -59,7 +59,7 @@ class ViewController: UIViewController {
     @IBAction func showLoginViewController(_ sender: Any) {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(identifier: "Login")
+        let secondVC = storyboard.instantiateViewController(identifier: "LoginViewController_ID")
         
         
         secondVC.modalPresentationStyle = .fullScreen

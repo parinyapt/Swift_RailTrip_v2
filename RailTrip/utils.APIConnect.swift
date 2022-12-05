@@ -174,6 +174,7 @@ class utilsAPIConnect {
         let StationLongitude:String
         let StationGoogleMap:String
         let StationImage:String
+        let Platform:String
         
         enum CodingKeys: String, CodingKey {
             case StationID = "station_id"
@@ -183,6 +184,7 @@ class utilsAPIConnect {
             case StationLongitude = "station_longitude"
             case StationGoogleMap = "station_googlemap"
             case StationImage = "station_image"
+            case Platform = "platform"
         }
     }
     func Station(lineID:Int, completion: @escaping (DefaultAPIResponse<[StationResponse]>?, Int, Bool) -> Void) {
@@ -277,7 +279,7 @@ class utilsAPIConnect {
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(UserDefaults.standard.string(forKey: "RailTrip_User_Token") ?? "")",
             "Accept": "application/json",
-            "Accept-Language": UserDefaults.standard.string(forKey: "RailTrip_User_Language") ?? "th"
+            "Accept-Language": UserDefaults.standard.string(forKey: "RailTrip_User_Language") ?? "en"
         ]
         
         AF.request(

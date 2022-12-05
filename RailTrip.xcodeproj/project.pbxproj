@@ -26,6 +26,14 @@
 		AF21F9B6293CEED200E5E347 /* utils.APIConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21F9B5293CEED200E5E347 /* utils.APIConnect.swift */; };
 		AF21F9B8293CF4BD00E5E347 /* utils.model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21F9B7293CF4BD00E5E347 /* utils.model.swift */; };
 		AF21F9BA293CF8EE00E5E347 /* utils.validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21F9B9293CF8EE00E5E347 /* utils.validator.swift */; };
+		AFC4EE42293E208600A0CA4B /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4EE41293E208600A0CA4B /* TripViewController.swift */; };
+		AFC4EE45293E217F00A0CA4B /* TripListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4EE44293E217F00A0CA4B /* TripListCell.swift */; };
+		AFC4EE47293E375000A0CA4B /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4EE46293E375000A0CA4B /* TripDetailViewController.swift */; };
+		AFC4EE49293E3DBD00A0CA4B /* TripDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4EE48293E3DBD00A0CA4B /* TripDetailTableViewCell.swift */; };
+		AFC4EE4B293E468A00A0CA4B /* StationInfoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4EE4A293E468A00A0CA4B /* StationInfoListViewController.swift */; };
+		AFC4EE4D293E4F3500A0CA4B /* StationInfoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4EE4C293E4F3500A0CA4B /* StationInfoListTableViewCell.swift */; };
+		AFC4EE4F293E53D900A0CA4B /* StationInfoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4EE4E293E53D900A0CA4B /* StationInfoDetailViewController.swift */; };
+		AFC4EE51293E582300A0CA4B /* StationInfoDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC4EE50293E582300A0CA4B /* StationInfoDetailTableViewCell.swift */; };
 		FD6EB8416073E7FB99FBFE2D /* Pods_RailTrip_RailTripUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E453129FBAA4BFE5F654B15E /* Pods_RailTrip_RailTripUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +83,14 @@
 		AF21F9B5293CEED200E5E347 /* utils.APIConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.APIConnect.swift; sourceTree = "<group>"; };
 		AF21F9B7293CF4BD00E5E347 /* utils.model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.model.swift; sourceTree = "<group>"; };
 		AF21F9B9293CF8EE00E5E347 /* utils.validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.validator.swift; sourceTree = "<group>"; };
+		AFC4EE41293E208600A0CA4B /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
+		AFC4EE44293E217F00A0CA4B /* TripListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListCell.swift; sourceTree = "<group>"; };
+		AFC4EE46293E375000A0CA4B /* TripDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
+		AFC4EE48293E3DBD00A0CA4B /* TripDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDetailTableViewCell.swift; sourceTree = "<group>"; };
+		AFC4EE4A293E468A00A0CA4B /* StationInfoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationInfoListViewController.swift; sourceTree = "<group>"; };
+		AFC4EE4C293E4F3500A0CA4B /* StationInfoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationInfoListTableViewCell.swift; sourceTree = "<group>"; };
+		AFC4EE4E293E53D900A0CA4B /* StationInfoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationInfoDetailViewController.swift; sourceTree = "<group>"; };
+		AFC4EE50293E582300A0CA4B /* StationInfoDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationInfoDetailTableViewCell.swift; sourceTree = "<group>"; };
 		CFB5E19C2BB9C2627C134FC4 /* Pods-RailTrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RailTrip.debug.xcconfig"; path = "Target Support Files/Pods-RailTrip/Pods-RailTrip.debug.xcconfig"; sourceTree = "<group>"; };
 		E453129FBAA4BFE5F654B15E /* Pods_RailTrip_RailTripUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RailTrip_RailTripUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -147,8 +163,9 @@
 			children = (
 				184B6494293BC732001B800B /* AppDelegate.swift */,
 				184B6496293BC732001B800B /* SceneDelegate.swift */,
-				184B64D2293BE122001B800B /* View */,
 				184B6498293BC732001B800B /* ViewController.swift */,
+				184B64D2293BE122001B800B /* View */,
+				AFC4EE43293E212C00A0CA4B /* ViewCustomCell */,
 				184B649A293BC732001B800B /* Main.storyboard */,
 				184B649D293BC733001B800B /* Assets.xcassets */,
 				184B649F293BC733001B800B /* LaunchScreen.storyboard */,
@@ -185,6 +202,10 @@
 				184B64D3293BE13A001B800B /* LoginViewController.swift */,
 				AF072570293D28060097D992 /* RegisterViewController.swift */,
 				AF072572293D28420097D992 /* OTPVerifyViewController.swift */,
+				AFC4EE41293E208600A0CA4B /* TripViewController.swift */,
+				AFC4EE46293E375000A0CA4B /* TripDetailViewController.swift */,
+				AFC4EE4A293E468A00A0CA4B /* StationInfoListViewController.swift */,
+				AFC4EE4E293E53D900A0CA4B /* StationInfoDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -197,6 +218,17 @@
 				327D7613ABCE6A6E34A8606C /* Pods_RailTripTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AFC4EE43293E212C00A0CA4B /* ViewCustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				AFC4EE44293E217F00A0CA4B /* TripListCell.swift */,
+				AFC4EE48293E3DBD00A0CA4B /* TripDetailTableViewCell.swift */,
+				AFC4EE4C293E4F3500A0CA4B /* StationInfoListTableViewCell.swift */,
+				AFC4EE50293E582300A0CA4B /* StationInfoDetailTableViewCell.swift */,
+			);
+			path = ViewCustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,12 +471,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC4EE4F293E53D900A0CA4B /* StationInfoDetailViewController.swift in Sources */,
+				AFC4EE4B293E468A00A0CA4B /* StationInfoListViewController.swift in Sources */,
 				AF072571293D28060097D992 /* RegisterViewController.swift in Sources */,
+				AFC4EE4D293E4F3500A0CA4B /* StationInfoListTableViewCell.swift in Sources */,
 				AF072573293D28420097D992 /* OTPVerifyViewController.swift in Sources */,
 				184B64D4293BE13A001B800B /* LoginViewController.swift in Sources */,
+				AFC4EE45293E217F00A0CA4B /* TripListCell.swift in Sources */,
+				AFC4EE47293E375000A0CA4B /* TripDetailViewController.swift in Sources */,
 				AF21F9BA293CF8EE00E5E347 /* utils.validator.swift in Sources */,
+				AFC4EE51293E582300A0CA4B /* StationInfoDetailTableViewCell.swift in Sources */,
 				184B6499293BC732001B800B /* ViewController.swift in Sources */,
+				AFC4EE49293E3DBD00A0CA4B /* TripDetailTableViewCell.swift in Sources */,
 				AF07256F293D108D0097D992 /* utils.alert.swift in Sources */,
+				AFC4EE42293E208600A0CA4B /* TripViewController.swift in Sources */,
 				AF21F9B6293CEED200E5E347 /* utils.APIConnect.swift in Sources */,
 				184B6495293BC732001B800B /* AppDelegate.swift in Sources */,
 				AF21F9B8293CF4BD00E5E347 /* utils.model.swift in Sources */,
@@ -626,6 +666,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WMQSD4MT85;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RailTrip/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -638,7 +679,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cosci.RailTrip;
+				PRODUCT_BUNDLE_IDENTIFIER = "parinyapt.Fifa-WorldCup-2022-Final-Exam-049";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -654,6 +695,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WMQSD4MT85;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RailTrip/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -666,7 +708,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cosci.RailTrip;
+				PRODUCT_BUNDLE_IDENTIFIER = "parinyapt.Fifa-WorldCup-2022-Final-Exam-049";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
