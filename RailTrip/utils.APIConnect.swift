@@ -147,7 +147,7 @@ class utilsAPIConnect {
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(UserDefaults.standard.string(forKey: "RailTrip_User_Token") ?? "")",
             "Accept": "application/json",
-            "Accept-Language": UserDefaults.standard.string(forKey: "RailTrip_User_Language") ?? "th"
+            "Accept-Language": UserDefaults.standard.string(forKey: "RailTrip_User_Language") ?? "en"
         ]
         
         AF.request(
@@ -192,7 +192,7 @@ class utilsAPIConnect {
         let headers: HTTPHeaders = [
             "Authorization": "Bearer \(UserDefaults.standard.string(forKey: "RailTrip_User_Token") ?? "")",
             "Accept": "application/json",
-            "Accept-Language": UserDefaults.standard.string(forKey: "RailTrip_User_Language") ?? "th"
+            "Accept-Language": UserDefaults.standard.string(forKey: "RailTrip_User_Language") ?? "en"
         ]
         
         AF.request(
@@ -278,6 +278,214 @@ class utilsAPIConnect {
             "Authorization": "Bearer \(UserDefaults.standard.string(forKey: "RailTrip_User_Token") ?? "")",
             "Accept": "application/json",
             "Accept-Language": UserDefaults.standard.string(forKey: "RailTrip_User_Language") ?? "th"
+        ]
+        
+        AF.request(
+            url,
+            method: .get,
+            headers: headers
+        ).responseDecodable(of: reponseStruct.self) { response in
+            switch(response.result){
+            case .success:
+                completion(response.value,response.response?.statusCode ?? 0,false)
+                break
+            case .failure:
+                completion(nil,response.response?.statusCode ?? 0,true)
+                break
+            }
+        }
+    }
+    
+    struct ListEndStationResponse: Codable {
+        let LinePlatform: String
+        let LineName: String
+        let StationCode:String
+        let StationName:String
+        let StationMinPrice:Int
+        let StationMinTime:Int
+        let StationMinStation:Int
+        
+        enum CodingKeys: String, CodingKey {
+            case LinePlatform = "line_platform"
+            case LineName = "line_name"
+            case StationCode = "station_code"
+            case StationName = "station_name"
+            case StationMinPrice = "station_min_price"
+            case StationMinTime = "station_min_time"
+            case StationMinStation = "station_min_station"
+        }
+    }
+    func ListEndStation(StartStationCode:String, EndStationLineID:Int, Sortby:String?, completion: @escaping (DefaultAPIResponse<[ListEndStationResponse]>?, Int, Bool) -> Void) {
+        typealias reponseStruct = DefaultAPIResponse<[ListEndStationResponse]>
+        let url = "\(BASE_URL)/route/list-to-station/\(StartStationCode)/\(EndStationLineID)"
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(UserDefaults.standard.string(forKey: "RailTrip_User_Token") ?? "")",
+            "Accept": "application/json",
+            "Accept-Language": UserDefaults.standard.string(forKey: "RailTrip_User_Language") ?? "en"
+        ]
+        
+        let parameters: [String: String] = [
+            "sort": Sortby ?? "price",
+        ]
+        
+        AF.request(
+            url,
+            method: .get,
+            parameters: parameters,
+            encoder: URLEncodedFormParameterEncoder.default,
+            headers: headers
+        ).responseDecodable(of: reponseStruct.self) { response in
+            switch(response.result){
+            case .success:
+                completion(response.value,response.response?.statusCode ?? 0,false)
+                break
+            case .failure:
+                completion(nil,response.response?.statusCode ?? 0,true)
+                break
+            }
+        }
+    }
+    
+    struct ListAllRouteResponse: Codable {
+        let fromLinePlatform, fromLineName, fromStationCode, fromStationName: String
+        let toLinePlatform, toLineName, toStationCode, toStationName: String
+        let minPrice, minTime, minStation: Int
+        let route: [Route]
+        
+        enum CodingKeys: String, CodingKey {
+            case fromLinePlatform = "from_line_platform"
+            case fromLineName = "from_line_name"
+            case fromStationCode = "from_station_code"
+            case fromStationName = "from_station_name"
+            case toLinePlatform = "to_line_platform"
+            case toLineName = "to_line_name"
+            case toStationCode = "to_station_code"
+            case toStationName = "to_station_name"
+            case minPrice = "min_price"
+            case minTime = "min_time"
+            case minStation = "min_station"
+            case route
+        }
+        
+        struct Route: Codable {
+            let routeID: Int
+            let platform: [String]
+            let price, time, station: Int
+
+            enum CodingKeys: String, CodingKey {
+                case routeID = "route_id"
+                case platform, price, time, station
+            }
+        }
+    }
+    func ListAllRoute(StartStationCode:String, EndStationCode:String, completion: @escaping (DefaultAPIResponse<ListAllRouteResponse>?, Int, Bool) -> Void) {
+        typealias reponseStruct = DefaultAPIResponse<ListAllRouteResponse>
+        let url = "\(BASE_URL)/route/list/\(StartStationCode)/\(EndStationCode)"
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(UserDefaults.standard.string(forKey: "RailTrip_User_Token") ?? "")",
+            "Accept": "application/json",
+            "Accept-Language": UserDefaults.standard.string(forKey: "RailTrip_User_Language") ?? "en"
+        ]
+        
+        AF.request(
+            url,
+            method: .get,
+            headers: headers
+        ).responseDecodable(of: reponseStruct.self) { response in
+            switch(response.result){
+            case .success:
+                completion(response.value,response.response?.statusCode ?? 0,false)
+                break
+            case .failure:
+                completion(nil,response.response?.statusCode ?? 0,true)
+                break
+            }
+        }
+    }
+    
+    struct RouteDetailResponse: Codable {
+        let fromLinePlatform, fromLineName, fromStationCode, fromStationName: String
+        let toLinePlatform, toLineName, toStationCode, toStationName: String
+        let minPrice, minTime, minStation: Int
+        let stationList: [StationList]
+        
+        enum CodingKeys: String, CodingKey {
+            case fromLinePlatform = "from_line_platform"
+            case fromLineName = "from_line_name"
+            case fromStationCode = "from_station_code"
+            case fromStationName = "from_station_name"
+            case toLinePlatform = "to_line_platform"
+            case toLineName = "to_line_name"
+            case toStationCode = "to_station_code"
+            case toStationName = "to_station_name"
+            case minPrice = "min_price"
+            case minTime = "min_time"
+            case minStation = "min_station"
+            case stationList = "station_list"
+        }
+        
+        struct StationList: Codable {
+            let LinePlatform: String
+            let StationCode: String
+            let StationName: String
+
+            enum CodingKeys: String, CodingKey {
+                case LinePlatform = "line_platform"
+                case StationCode = "station_code"
+                case StationName = "station_name"
+            }
+        }
+    }
+    func RouteDetail(RouteID:Int, completion: @escaping (DefaultAPIResponse<RouteDetailResponse>?, Int, Bool) -> Void) {
+        typealias reponseStruct = DefaultAPIResponse<RouteDetailResponse>
+        let url = "\(BASE_URL)/route/detail/\(RouteID)"
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(UserDefaults.standard.string(forKey: "RailTrip_User_Token") ?? "")",
+            "Accept": "application/json",
+            "Accept-Language": UserDefaults.standard.string(forKey: "RailTrip_User_Language") ?? "en"
+        ]
+        
+        AF.request(
+            url,
+            method: .get,
+            headers: headers
+        ).responseDecodable(of: reponseStruct.self) { response in
+            switch(response.result){
+            case .success:
+                completion(response.value,response.response?.statusCode ?? 0,false)
+                break
+            case .failure:
+                completion(nil,response.response?.statusCode ?? 0,true)
+                break
+            }
+        }
+    }
+    
+    struct ListTripPlaceResponse: Codable {
+        let placeID, placeName, placeLatitude, placeLongitude: String
+        let placeDistance: String
+        let placeImage: String
+
+        enum CodingKeys: String, CodingKey {
+            case placeID = "place_id"
+            case placeName = "place_name"
+            case placeLatitude = "place_latitude"
+            case placeLongitude = "place_longitude"
+            case placeDistance = "place_distance"
+            case placeImage = "place_image"
+        }
+    }
+    func ListTripPlace(RouteID:Int, completion: @escaping (DefaultAPIResponse<[ListTripPlaceResponse]>?, Int, Bool) -> Void) {
+        typealias reponseStruct = DefaultAPIResponse<[ListTripPlaceResponse]>
+        let url = "\(BASE_URL)/trip/place/\(RouteID)"
+        
+        let headers: HTTPHeaders = [
+            "Authorization": "Bearer \(UserDefaults.standard.string(forKey: "RailTrip_User_Token") ?? "")",
+            "Accept": "application/json",
+            "Accept-Language": UserDefaults.standard.string(forKey: "RailTrip_User_Language") ?? "en"
         ]
         
         AF.request(

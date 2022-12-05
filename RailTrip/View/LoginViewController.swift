@@ -21,19 +21,20 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         
-        utilsAPIConnect().StationDetail(stationID: 51) { response,statusCode,error in
+        utilsAPIConnect().RouteDetail(RouteID: 12980) { response,statusCode,error in
             switch(error){
             case false:
                 switch(statusCode){
                 case 200:
                     print("========200========")
 //                    print(response)
-                    print(response?.data?.StationLink?.count ?? 0)
-                    for datax in response?.data?.StationLink ?? [] {
-                        print(datax)
-//                        print(datax.LineID)
-//                        print(datax.LineName)
-//                        print(datax.LinePlatform)
+//                    print(response?.data?.count ?? 0)
+                    for datax in response?.data?.stationList ?? [] {
+                        print(datax.StationName)
+//                        print(datax.price)
+//
+//                        print(datax.time)
+////                        print(datax.LinePlatform)
                     }
                     break
                 default:
