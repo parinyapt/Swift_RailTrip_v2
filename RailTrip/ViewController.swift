@@ -14,6 +14,7 @@
 
 import UIKit
 import AVFoundation
+import RAMAnimatedTabBarController
 
 class ViewController: UIViewController {
     
@@ -21,8 +22,23 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         playBackgroundVideo()
         // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDefaults.standard.string(forKey: "RailTrip_User_Token") != nil {
+            let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            guard let mainVC = mainStoryBoard.instantiateViewController(withIdentifier: "RAMAnimatedTabBarController_ID") as? RAMAnimatedTabBarController else {
+                return
+            }
+            mainVC.modalPresentationStyle = .fullScreen
+            mainVC.modalTransitionStyle = .crossDissolve
+            
+            self.present(mainVC, animated: false, completion: nil)
+        }
     }
     
     //Video Background
@@ -59,7 +75,7 @@ class ViewController: UIViewController {
     @IBAction func showLoginViewController(_ sender: Any) {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(identifier: "Login")
+        let secondVC = storyboard.instantiateViewController(identifier: "LoginViewController_ID")
         
         
         secondVC.modalPresentationStyle = .fullScreen
