@@ -26,6 +26,7 @@ class SettingViewController: UIViewController {
         }else{
             SMLanguage.selectedSegmentIndex = 0
         }
+        
     }
     
     @IBAction func ChangeLanguage(_ sender: Any) {
